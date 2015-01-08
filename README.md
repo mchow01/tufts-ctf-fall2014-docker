@@ -10,24 +10,24 @@ In this traditional game, you will be finding and exploiting vulnerabilities in 
 Docker
 
 #Pulling the Image From Docker Hub
-`docker pull mchow01/tufts-ctf-fall2014`
+`docker pull mchow01/tufts-ctf-fall2014` (depending on your Docker configuration, `sudo` may be required)
 
-Docker Hub URL: https://registry.hub.docker.com/u/mchow01/tufts-ctf-fall2014/
+Docker Hub URL: [https://registry.hub.docker.com/u/mchow01/tufts-ctf-fall2014/]https://registry.hub.docker.com/u/mchow01/tufts-ctf-fall2014/
 
 #Running the Docker Image
-`sudo docker run --name ctf -d -p 80:80 mchow01/tufts-ctf-fall2014`
+`docker run --name ctf -d -p 80:80 mchow01/tufts-ctf-fall2014`
 
 #Playing the Game
-Assuming that the Docker image is running (verify by running `sudo docker ps`) and that port 80 is used, go to `http://localhost/` using a web browser.  It can take 1 to 2 minutes to get the game server up and running.
+Assuming that the Docker image is running (verify by running `docker ps`) and that port 80 is used, go to `http://localhost/` using a web browser.  It can take 1 to 2 minutes to get the game server up and running.
 
 ##A Flag
-In the style of many Security Capture The Flag games, the format of a flag will look like this: key{flag}. Examples: key{somelongstringthatrepresentshteflag} or key{334359b051f4dda20937055605b3706dfe91d6c8}"). Each flag will worth a certain value: 100 points, 200 points, and 300 points. Each team will be given a unique key to submit flags.
+In the style of many Security Capture The Flag games, the format of a flag will look like this: `key{flag}`. Examples: `key{somelongstringthatrepresentshteflag}` or `key{334359b051f4dda20937055605b3706dfe91d6c8}`). Each flag will worth a certain value: 100 points, 200 points, and 300 points. Each team will be given a unique key to submit flags.
 
 ##Submitting a Flag
-Go to http://localhost/scoreboard/, use `general` (Team 13) as the submission key as you are playing as a member of the general public.
+Go to `http://localhost/scoreboard/`, use `general` (Team 13) as the submission key as you are playing as a member of the general public.
 
 ##Changes to Game
-* Challenge 9 ("Not Global Thermal Nuclear War") no longer works as it's game server has been turned off.  Therefore, here is the base64 of the flag: a2V5e2U2NmUyODU1MmU3ZTcxYzNjYTVmYTA0NTQwMjEzYmI3YzA3NDRmMDN9
+* Challenge 9 ("Not Global Thermal Nuclear War") no longer works as it's game server has been turned off.  Therefore, here is the base64 of the flag: `a2V5e2U2NmUyODU1MmU3ZTcxYzNjYTVmYTA0NTQwMjEzYmI3YzA3NDRmMDN9`
 
 ##Some Vulnerabilities Found In This Game
 * SQL injection
@@ -38,9 +38,9 @@ Go to http://localhost/scoreboard/, use `general` (Team 13) as the submission ke
 * Security-by-obscurity
 
 #Stopping Running the Docker Image
-1. Get the running container ID by running `sudo docker ps`
-2. Run `sudo docker stop <the container ID>`
-3. Run `sudo docker rm -f <the container ID>`
+1. Get the running container ID by running `docker ps`
+2. Run `docker stop <the container ID>`
+3. Run `docker rm -f <the container ID>`
 
 #Building the Docker Image
-`sudo docker build -t mchow01/tufts-ctf-fall2014 .`
+`docker build -t mchow01/tufts-ctf-fall2014 .`
