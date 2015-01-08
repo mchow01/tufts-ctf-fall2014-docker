@@ -12,7 +12,7 @@ Docker
 #Pulling the Image From Docker Hub
 `docker pull mchow01/tufts-ctf-fall2014` (depending on your Docker configuration, `sudo` may be required)
 
-Docker Hub URL: [https://registry.hub.docker.com/u/mchow01/tufts-ctf-fall2014/]https://registry.hub.docker.com/u/mchow01/tufts-ctf-fall2014/
+Docker Hub URL: https://registry.hub.docker.com/u/mchow01/tufts-ctf-fall2014/
 
 #Running the Docker Image
 `docker run --name ctf -d -p 80:80 mchow01/tufts-ctf-fall2014`
